@@ -2,4 +2,130 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+main {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+    position: fixed;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    padding: 1em;
+    text-align: center;
+    background-image: url(pwd.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .container {
+    border: 1px solid rebeccapurple;
+    height: 350px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .container h1 {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    animation-name: color;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+        color:rebeccapurple;
+    }
+    25% {
+        color: crimson;
+    }
+    50% {
+        color: rosybrown;
+    }
+    75% {
+        color: thistle;
+    }
+    100% {
+        color: whitesmoke;
+    }
+}
+
+main .container span {
+    font-size: 0.8rem;
+    text-align: left;
+    color: whitesmoke;
+}
+
+main .container input {
+    height: 30px;
+    width: 250px;
+    margin-bottom: 1em;
+    padding: 0 0.5em;
+}
+
+main .container .sign-container {
+    width: 250px;
+    margin: auto;
+}
+
+main .container .sign-container button {
+    padding: 0.75em 1.5em;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: rebeccapurple;
+    margin: 1em;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+main .container .sign-container button:first-child {
+    margin-right: 1em;
+}
+
+main .container .sign-container button:hover, main .container .sign-container button:focus {
+    background-color: rgb(78, 34, 122);
+    transform: translateY(10%);
+}
+
+main .container p {
+    height: 20px;
+    width: 200px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 2px black;
+    /* border: 1px solid black; */
+    margin: auto;
+    padding: 0.3em 0;
+    cursor: copy;
+}
+
+main .container button {
+    padding: 0.65em 1.5em;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: rebeccapurple;
+    margin: 1em;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+main .container button:hover, main .container button:focus {
+    background-color: rgb(78, 34, 122);
+    transform: translateY(-10%);
 }
