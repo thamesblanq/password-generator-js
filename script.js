@@ -4,7 +4,7 @@ const signBtn = document.querySelector('#sign-pwd');
 const display = document.querySelector('#pwd-container');
 const clearBtn = document.querySelector('#clear-btn');
 const alphaNumeral = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';
-const signs = '!@#$%^&*(){}|[]';
+const signs = '!@#$%^&*';
 
 let pwd = '';
 
