@@ -73,3 +73,12 @@ input.addEventListener ('keyup', (event) => {
         display.textContent = userCreate(input.value);
     }
 })
+//clipboard API
+display.addEventListener('click', async () => {
+    try {
+        await navigator.clipboard.readText();
+    }
+    catch (err) {
+        console.error('could not write to clipboard', err);
+    }
+})

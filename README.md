@@ -12,7 +12,7 @@ a generate button to generate passwords without signs and also for the input
 
 an add sign btn to generate passwords for with signs
 
-
+I also implemented the Clipboard API, once you click on the generated password you will be able to copy the text to your clipboard
 
 ## Files
 index.html
