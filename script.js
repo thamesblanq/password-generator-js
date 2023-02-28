@@ -68,3 +68,8 @@ clearBtn.addEventListener('click', () => {
     display.textContent = '';
 }) 
 
+input.addEventListener ('keyup', (event) => {
+    if (event.key === 'Enter' && input.value !== '') {
+        display.textContent = userCreate(input.value);
+    }
+})
