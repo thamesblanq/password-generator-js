@@ -75,10 +75,19 @@ input.addEventListener ('keyup', (event) => {
 })
 //clipboard API
 display.addEventListener('click', async () => {
+    let copyText = display.textContent;
     try {
-        await navigator.clipboard.readText();
+        await navigator.clipboard.writeText(copyText);
+        alert('Text has been copied successfully.');
     }
     catch (err) {
-        console.error('could not write to clipboard', err);
+        console.error('Could not write to clipboard', err);
+
+        try {
+            await navigator.clipboard.readText(copyText);
+        }
+        catch {
+            console.error('Could not read text');
+        }
     }
 })
