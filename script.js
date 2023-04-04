@@ -36,15 +36,34 @@ function userCreate(str){
         return alert('text must be more than eight letters/alphabets');
     }
 
-    let strUpper = str.toUpperCase();//string to upprcase
+    let strUpper = str.toUpperCase();//string to uppercase
     let normalAndUpper = str + strUpper;//concantenating both strings
-    //looping through the concantenated strings and givng the results a max number of 9
+    //looping through the concantenated strings and giving the results a max number of 9
     for (let i = 0; i < 8; i++){
         let random = Math.floor(Math.random() * normalAndUpper.length);
         pwd += normalAndUpper[random];
     }
     return pwd;
 }
+// str.split() -- convert str to an array an loop through them to get an identical or more pleasing generated password
+
+function randomStr(str) {
+    let strArr = str.split("");
+    console.log(strArr)
+    let pass = '';
+    if (str.length >= 8){
+    for(let i = 0; i < 7; i++){
+        let random = Math.floor(Math.random() * strArr.length);
+        pass += strArr[random];
+        
+    }
+    } else {
+        alert('Your input is less than eight');
+        console.log('input is less than eight')
+    }
+    return pass;
+}
+console.log(randomStr('Holyinfant!!!'))
 
 //generatePassword();
 //addSign();
